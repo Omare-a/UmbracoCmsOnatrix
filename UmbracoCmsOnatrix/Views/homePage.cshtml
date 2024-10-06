@@ -1,0 +1,98 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+@{
+
+	Layout = "mainLayout.cshtml";
+
+	ViewBag.Title = Model?.Value("pageTitle") ?? null;
+
+	var heroBackgroundimage = Model?.Value<IPublishedContent>("heroBackgroundImage")?.Url() ?? "";
+}
+
+
+<section class="showcase">
+	<div class="background-image" style="background-image:url(@heroBackgroundimage); background-size: cover; background-position:60%;"></div>
+	<div class="container">
+		<div class="content">
+			<h1 class="d4">@Model?.Value("heroHeadline")</h1>
+			<p>@Model?.Value("heroText")</p>
+			<a class="btn-gray" href="@Model?.Value("heroButtonUrl")">@Model?.Value("heroButtonText")</a>
+
+		</div>
+	</div>
+</section>
+
+<section class="features">
+         <div class="container">
+            <p class="h6">OUR SERVICES</p>
+            <h1>We Provide The Solutions <br>To Grow Your Business Faster</h1>
+            <div class="tool-features">
+               <div class="box">
+                  <h5>Risk Management</h5>
+                  <img src="images/featurepic/image1Risk.svg" alt="">
+                  <p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+               </div>
+               <div class="box">
+                  <h5>Bonds & Commodities</h5>
+                  <img src="images/featurepic/image2Bonds.svg" alt="">
+                  <p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+               </div>
+               <div class="box">
+                  <h5>Assurance & Audits</h5>
+                  <img src="images/featurepic/image3Assurance.svg" alt="">
+                  <p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+               </div>
+               <div class="box">
+                  <h5>Tax and Trusts</h5>
+                  <img src="images/featurepic/image4Tax.svg" alt="">
+                  <p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+               </div>
+               <div class="box">
+                  <h5>Financial Advisor</h5>
+                  <img src="images/featurepic/image5Finance.svg" alt="">
+                  <p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+               </div>
+               <div class="box">
+                  <h5>Statistic Advisors</h5>
+                  <img src="images/featurepic/image6Stat.svg" alt="">
+                  <p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+               </div>
+            </div>
+         </div>
+</section>
+
+<section class="why-choose-us">
+         <div class="container">
+            <h2 class="h2">We are trusted by more than</h2>
+            <h2 class="hex">4.000+ clients</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis molestie nulla. Nam accumsanporttitor arcu,ac tincidunt lectus tincidunt sed.</p>
+            <a class="btn-theme-s" href="">Read our story</a>
+            <img src="Images/empoloyee.svg" alt="">
+         </div>
+</section>
+
+<section class="success">
+         <div class="container">
+            <h6 class="h6">SUCCESS STORIES</h6>
+            <h2 class="h2">Success story</h2>
+            <div class="stat">
+               <div>
+                  <p class="d1">689</p>
+                  <p class="text-lg">More than 100 customers has been served</p>
+               </div>
+               <div>
+                  <p class="d1">370</p>
+                  <p class="text-lg">More than 370 projects has been completed</p>
+               </div>
+               <div>
+                  <p class="d1">125</p>
+                  <p class="text-lg">More than 125 branches has been established in Europe and America</p>
+               </div>
+            </div>
+            <img src="Images/succesempoloyee.svg" alt="">
+         </div>
+
+</section>
+

@@ -1,0 +1,12 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
+@using ContentModel = Umbraco.Cms.Web.Common.PublishedModels;
+
+@{
+    var paragraphContent = Model?.Content.Value<string>("paragraphContent");
+}
+
+@if(!string.IsNullOrEmpty(paragraphContent))
+{
+    <p>@paragraphContent</p>
+}
